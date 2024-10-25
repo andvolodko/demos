@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GardenMakeover Three.js TypeScript</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <style>
+        body {
+            overflow: hidden;
+            margin: 0px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        #pingStats {
+            position: absolute;
+            top: 60px;
+            left: 4px;
+            width: 400px;
+            height: 400px;
+            pointer-events: none;
+            color: white;
+            font-family: monospace;
+        }
+
+        #loading {
+            position: absolute;
+            top: 50%; /* Position from the top */
+            left: 50%; /* Position from the left */
+            transform: translate(-50%, -50%); /* Adjust to center */
+            width: 300px; /* Set width for the box */
+            height: 200px; /* Set height for the box */
+            /*background-color: #242424; !* Background color *!*/
+        }
+
+        .hint {
+            text-align: center;
+            color: #2c2fc5;
+        }
+
+        /* Loader */
+        .spinner {
+            position: relative;
+            left: 50%;
+            top: 50%;
+            width: 15.7px;
+            height: 15.7px;
+        }
+
+        .spinner div {
+            animation: spinner-4t3wzl 1.875s infinite backwards;
+            background-color: #474bff;
+            border-radius: 50%;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+        }
+
+        .spinner div:nth-child(1) {
+            animation-delay: 0.15s;
+            background-color: rgba(71,75,255,0.9);
+        }
+
+        .spinner div:nth-child(2) {
+            animation-delay: 0.3s;
+            background-color: rgba(71,75,255,0.8);
+        }
+
+        .spinner div:nth-child(3) {
+            animation-delay: 0.45s;
+            background-color: rgba(71,75,255,0.7);
+        }
+
+        .spinner div:nth-child(4) {
+            animation-delay: 0.6s;
+            background-color: rgba(71,75,255,0.6);
+        }
+
+        .spinner div:nth-child(5) {
+            animation-delay: 0.75s;
+            background-color: rgba(71,75,255,0.5);
+        }
+
+        @keyframes spinner-4t3wzl {
+            0% {
+                transform: rotate(0deg) translateY(-200%);
+            }
+
+            60%, 100% {
+                transform: rotate(360deg) translateY(-200%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div id='pingStats'></div>
+<div id='loading'>
+    <div class="hint">
+        <h1>GardenMakeover</h1>
+        <p>Design, decorate, and dazzle! Transform your garden into a paradise!</p>
+    </div>
+    <div class="spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+<script type='module' src='bundle.js'></script>
+</body>
+
+</html>
