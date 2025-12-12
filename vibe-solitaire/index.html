@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VIBE SOLITAIRE</title>
+    <script type="module" crossorigin src="./assets/index-DD8TrZee.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CQ1hZwKk.css">
+  </head>
+  <body>
+    <h1 class="game-title">VIBE SOLITAIRE</h1>
+    <div class="game-stats">
+      <div class="stat-item" id="moves-counter">Moves: 0</div>
+      <div class="stat-item" id="time-counter">Time: 00:00</div>
+    </div>
+    
+    <!-- Menu Button -->
+    <button class="menu-button" id="menu-btn">
+      <span>⋮</span>
+    </button>
+    
+    <!-- Menu Panel -->
+    <div class="menu-panel" id="menu-panel">
+      <div class="menu-section">
+        <div class="menu-section-title">Game</div>
+        <button class="menu-button-item" id="new-game-btn">NEW GAME</button>
+      </div>
+      
+      <div class="menu-section">
+        <div class="menu-section-title">Background</div>
+        <div class="background-options">
+          <div class="background-option" data-bg="green" style="background: linear-gradient(135deg, #0a5d2e 0%, #0d4a24 50%, #0a5d2e 100%);">
+            <div class="background-option-label">Green Felt</div>
+          </div>
+          <div class="background-option" data-bg="blue" style="background: linear-gradient(135deg, #1a4d7a 0%, #0f3d5c 50%, #1a4d7a 100%);">
+            <div class="background-option-label">Blue Felt</div>
+          </div>
+          <div class="background-option" data-bg="red" style="background: linear-gradient(135deg, #7a1a1a 0%, #5c0f0f 50%, #7a1a1a 100%);">
+            <div class="background-option-label">Red Felt</div>
+          </div>
+          <div class="background-option" data-bg="purple" style="background: linear-gradient(135deg, #4a1a5c 0%, #3d0f4a 50%, #4a1a5c 100%);">
+            <div class="background-option-label">Purple Felt</div>
+          </div>
+          <div class="background-option active" data-bg="matrix" style="background: linear-gradient(135deg, #000000 0%, #001100 50%, #000000 100%); position: relative; overflow: hidden;">
+            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 255, 0, 0.03) 2px, rgba(0, 255, 0, 0.03) 4px);"></div>
+            <div class="background-option-label">Matrix</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="game-root"></div>
+  </body>
+</html>
+
